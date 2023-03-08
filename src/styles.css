@@ -1,7 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background-color: aliceblue;
+    background-color: rgb(8, 21, 33);
+    color: white;
 }
 .container {
     border: 1px solid gray;
 }
+
+td {
+    color: white;
+    font-family: 'Inconsolata',monospace;
+}
+
+h2 {
+    color: rgb(234, 255, 8);
+    font-family: 'Inconsolata', serif;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 3%;
+}
+
+input[type="text"] {
+    width: 72vw;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border: 1px solid #ccc;
+   
+  }

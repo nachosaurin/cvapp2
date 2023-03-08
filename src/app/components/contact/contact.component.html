@@ -1,1 +1,22 @@
-<p>contact works!</p>
+<div class="form">
+    <h2>Contact: _</h2>
+   <form [formGroup]="textContactForm" (ngSubmit)="save()"> 
+        <div class="form-group">
+            <input type="text" rows="4" formControlName="textContact" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success" [disabled]="textContactForm.invalid">Save</button>
+    </form>
+    <div class="formtTextContact">
+        <table class="table">
+            <thead>     
+            </thead>
+            <tbody>
+                <tr *ngFor="let text of textContact"> 
+                    <td>Contactame a traves de este link: <a href="{{text.textContact}}"></a></td>
+                    <button type="button" class="btn btn-primary" (click)="edit(text)">Edit</button>
+                    <button type="button" class="btn btn-danger" (click)="delete(text.id)">Delete</button>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

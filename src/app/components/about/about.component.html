@@ -1,8 +1,8 @@
-<div class="formTextAbout">
-    <h2>Ingrese el texto:</h2>
+<div class="form">
+    <h2>About me: _</h2>
     <form [formGroup]="textAboutForm" (ngSubmit)="save()">
         <div class="form-group">
-            <input type="text" formControlName="textAbout" class="form-control">
+            <input type="text" rows="4" formControlName="textAbout" class="form-control">
         </div>
         <button type="submit" class="btn btn-success" [disabled]="textAboutForm.invalid">Save</button>
     </form>

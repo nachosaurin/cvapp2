@@ -13,6 +13,7 @@ import { Route, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutService } from './services/about.service';
+import { ContactService } from './services/contact.service';
 
 const routes: Route[] = [
   {path: '', component: HomeComponent },
@@ -40,7 +41,8 @@ const routes: Route[] = [
     HttpClientModule
   ],
   providers: [
-    AboutService
+    AboutService, 
+    ContactService
   ],
   bootstrap: [AppComponent]
 })
