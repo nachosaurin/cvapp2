@@ -46,6 +46,13 @@ export class AboutComponent {
     )
   }
 
+  delete(id: any){
+    this.aboutService.deleteAboutText(id).subscribe(resp=>{
+      if(resp===true){
+        this.textAbout.pop(id);
+    }
+  })
+  }
   
 
   edit(text: any){
