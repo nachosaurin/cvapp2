@@ -1,0 +1,25 @@
+<div class="formTextAbout">
+    <h2>Ingrese el texto:</h2>
+    <form [formGroup]="textAboutForm" (ngSubmit)="save()">
+        <div class="form-group">
+            <input type="text" formControlName="textAbout" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success" [disabled]="textAboutForm.invalid">Save</button>
+    </form>
+    <div class="formtTextAbout">
+        <table class="table">
+            <thead>     
+            </thead>
+            <tbody>
+                <tr *ngFor="let text of textAbout">
+                    <td>{{text.textAbout}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+
