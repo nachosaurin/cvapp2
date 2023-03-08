@@ -40,7 +40,7 @@ export class AboutComponent {
   save(): void {
     this.aboutService.saveAboutText(this.textAboutForm.value).subscribe(resp=>{
       this.textAboutForm.reset();
-      this.textAbout.push();
+      this.textAbout.push(resp);
     },
     error=>{console.error(error)}
     )
@@ -48,9 +48,10 @@ export class AboutComponent {
 
   
 
-  /*edit(text: any){
+  edit(text: any){
     this.textAboutForm.setValue({
-      
+      id:text.id,
+      textAbout: text.textAbout,
     })
-  }*/
+  }
 }

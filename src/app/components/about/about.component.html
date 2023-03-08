@@ -13,7 +13,10 @@
             <tbody>
                 <tr *ngFor="let text of textAbout">
                     <td>{{text.textAbout}}</td>
+                    <button type="button" class="btn btn-primary" (click)="edit(text)">Edit</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
                 </tr>
+                
             </tbody>
         </table>
     </div>

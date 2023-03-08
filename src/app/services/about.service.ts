@@ -14,8 +14,8 @@ export class AboutService {
     return this.httpClient.get(this.API_SERVER);
   }
   
-  public saveAboutText(savedText: any):Observable<any>{
-    return this.httpClient.post(this.API_SERVER, savedText);
+  public saveAboutText(text: any):Observable<any>{
+    return this.httpClient.post(this.API_SERVER, text);
   }
 
   public deleteAboutText(id:any):Observable<any>{
