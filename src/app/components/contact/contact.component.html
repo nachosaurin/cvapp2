@@ -12,7 +12,7 @@
             </thead>
             <tbody>
                 <tr *ngFor="let text of textContact"> 
-                    <td>Contactame a traves de este link: <a href="{{text.textContact}}"></a></td>
+                    <td>Contactame a traves de este link: {{text.textContact}}</td>
                     <button type="button" class="btn btn-primary" (click)="edit(text)">Edit</button>
                     <button type="button" class="btn btn-danger" (click)="delete(text.id)">Delete</button>
                 </tr>
